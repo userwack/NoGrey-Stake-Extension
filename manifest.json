@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-"name": "Casino Theme Customizer",
+"name": "NoGrey - Stake Theme Customizer",
   "version": "1.0.0",
   "description": "Customize the appearance of your favorite casino sites with themes, colors, and more.",
   "permissions": ["storage", "commands"],
