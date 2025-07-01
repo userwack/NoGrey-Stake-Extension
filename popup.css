@@ -1,0 +1,342 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 15px;
+  width: 300px;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  margin: 0;
+  box-sizing: border-box;
+  overscroll-behavior: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+h1 {
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h2 {
+  color: #007bff;
+  font-size: 18px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
+}
+
+.section {
+  background-color: #2a2a2a;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #bbbbbb;
+}
+
+input[type="text"],
+select {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #333;
+  color: #e0e0e0;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.3);
+}
+
+.color-picker-container {
+  margin-bottom: 15px;
+}
+
+.color-palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.color-swatch {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.color-swatch.selected {
+  border-color: #007bff;
+  transform: scale(1.1);
+}
+
+.color-swatch:hover {
+  transform: scale(1.05);
+  border-color: #0056b3;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.about-extension {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.about-extension a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.about-extension a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.button-group button {
+  width: auto;
+  margin: 0 auto;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+#resetColors {
+  background-color: #f44336;
+}
+
+#resetColors:hover {
+  background-color: #d32f2f;
+}
+
+
+/* Enhanced layout for setting-item to prevent overlap with toggle and input */
+.setting-item {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: 10px;
+  padding: 5px 0;
+  gap: 6px;
+}
+
+.setting-item-row + * {
+  margin-top: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.setting-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.setting-item-row .switch {
+  min-width: 40px;
+  flex-shrink: 0;
+}
+
+.setting-item input[type="text"] {
+  margin-top: 6px;
+  width: 100%;
+}
+
+.setting-item label {
+  color: #bbbbbb;
+  font-weight: 500;
+  flex-grow: 1;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #007bff;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #007bff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+#restrictedMessage {
+  color: #ff6347;
+  font-weight: bold;
+  margin-top: 20px;
+  border: 1px solid #ff6347;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #3a2a2a;
+}
+
+#restrictedMessage p {
+  margin: 5px 0;
+}
+
+.crypto-address-container {
+  margin-top: 15px;
+}
+
+.crypto-address-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #bbbbbb;
+}
+
+#cryptoSelect {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #333;
+  color: #e0e0e0;
+  font-size: 14px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#showQrCode {
+  background-color: #28a745; /* Green for show QR button */
+  margin-top: 10px;
+  width: 100%;
+}
+
+#showQrCode:hover {
+  background-color: #218838;
+}
+
+#qrCodeContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.network-section {
+  background-color: #333;
+  padding: 15px;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.network-section h3 {
+  color: #007bff;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.network-section p {
+  margin: 5px 0;
+  word-break: break-all;
+}
+
+#addressDisplay, #memoDisplay {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #e0e0e0;
+  word-break: break-all;
+}

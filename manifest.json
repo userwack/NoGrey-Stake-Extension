@@ -1,0 +1,93 @@
+{
+  "manifest_version": 3,
+"name": "Casino Theme Customizer",
+  "version": "1.0.0",
+  "description": "Customize the appearance of your favorite casino sites with themes, colors, and more.",
+  "permissions": ["storage", "commands"],
+  "host_permissions": [
+    "*://stake.us/*",
+    "*://stake.com/*",
+    "*://stake.ac/*",
+    "*://stake.games/*",
+    "*://stake.bet/*",
+    "*://stake.pet/*",
+    "*://stake1001.com/*",
+    "*://stake1002.com/*",
+    "*://stake1003.com/*",
+    "*://stake1021.com/*",
+    "*://stake1022.com/*",
+    "*://stake.mba/*",
+    "*://stake.jp/*",
+    "*://stake.bz/*",
+    "*://staketr.com/*",
+    "*://stake.ceo/*",
+    "*://stake.krd/*",
+    "https://noembed.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_page": "about.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://stake.us/*",
+        "*://stake.com/*",
+        "*://stake.ac/*",
+        "*://stake.games/*",
+        "*://stake.bet/*",
+        "*://stake.pet/*",
+        "*://stake1001.com/*",
+        "*://stake1002.com/*",
+        "*://stake1003.com/*",
+        "*://stake1021.com/*",
+        "*://stake1022.com/*",
+        "*://stake.mba/*",
+        "*://stake.jp/*",
+        "*://stake.bz/*",
+        "*://staketr.com/*",
+        "*://stake.ceo/*",
+        "*://stake.krd/*"
+      ],
+      "js": ["contentPreload.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "*://stake.us/*",
+        "*://stake.com/*",
+        "*://stake.ac/*",
+        "*://stake.games/*",
+        "*://stake.bet/*",
+        "*://stake.pet/*",
+        "*://stake1001.com/*",
+        "*://stake1002.com/*",
+        "*://stake1003.com/*",
+        "*://stake1021.com/*",
+        "*://stake1022.com/*",
+        "*://stake.mba/*",
+        "*://stake.jp/*",
+        "*://stake.bz/*",
+        "*://staketr.com/*",
+        "*://stake.ceo/*",
+        "*://stake.krd/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "open-extension-popup": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+K",
+        "mac": "Command+Shift+K"
+      },
+      "description": "Open the Casino Theme Customizer popup"
+  }
+}
+}

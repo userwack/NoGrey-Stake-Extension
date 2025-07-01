@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>About - Casino Theme Customizer</title>
+  <link rel="stylesheet" type="text/css" href="settings.css">
+</head>
+<body class="about-page">
+  <div class="container">
+    <div class="section">
+      <h2>Features:</h2>
+      <button id="toggleFeaturesButton" style="margin-bottom: 10px; font-size: 1em; width: 28px; height: 28px; line-height: 1; padding: 0; min-width: 0; min-height: 0;">+</button>
+      <div id="featuresList" class="features-list-hidden" style="margin-bottom: 20px;">
+        <ul style="font-size: 1.25em;">
+          <li>Change the grey colors on the Stake website to your preferred colors, affecting most Originals and the overall G(r)ey design.</li>
+          <li style="margin-top: 22px;">
+            <span style="font-size: 1.1em; font-weight: 600;">Display raw chat URLs as buttons:</span>
+            <p style="font-size:0.8em;"><b>For easy clicking and previews!</b></p>
+            <ul style="margin-top: 10px;">
+              <li><span style="font-weight:bold; font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', 'Android Emoji', 'EmojiSymbols', 'EmojiOne', 'Twemoji', sans-serif;">📷 Gyazo Image</span>: Image preview on hover.</li>
+              <li><span style="font-weight:bold; font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', 'Android Emoji', 'EmojiSymbols', 'EmojiOne', 'Twemoji', sans-serif;">🖼️ IBB Image</span>: Button to view image URL.</li>
+              <li><span style="font-weight:bold; font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', 'Android Emoji', 'EmojiSymbols', 'EmojiOne', 'Twemoji', sans-serif;">📸 Lightshot Image</span>: Button to view image URL.</li>
+              <li><span style="font-weight:bold; font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', 'Android Emoji', 'EmojiSymbols', 'EmojiOne', 'Twemoji', sans-serif;">▶️ Youtube Video</span>: Video preview, with options to view video or go to page URL.</li>
+              <li><span style="font-weight:bold; font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', 'Android Emoji', 'EmojiSymbols', 'EmojiOne', 'Twemoji', sans-serif;">▶️ Streamable Video</span>: Video preview, with options to view video or go to page URL.</li>
+              <li><span style="font-weight:bold; font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', 'Android Emoji', 'EmojiSymbols', 'EmojiOne', 'Twemoji', sans-serif;">🎁 View Promotion</span>: Button to view Stake Promotions.</li>
+              <li><span style="font-weight:bold; font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', 'Android Emoji', 'EmojiSymbols', 'EmojiOne', 'Twemoji', sans-serif;">📚 View Community Link</span>: Button to view Stake Community links.</li>
+            </ul>
+          </li>
+        </ul>
+        <p style="font-size: 1.1em;"><i>More to come!</i></p>
+      </div>
+    </div>
+    <div class="section">
+      <h2>About the Extension</h2>
+      <div class="info-item">
+        <p>Created by: <a href="#" id="creatorNameLink"><span id="creatorName"></span></a></p>
+        <p>This extension is <b>NOT</b> affiliated with Stake or any other listed websites.</p>
+        <p>Version: 1.0.0</p>
+        <div class="github-info" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;">
+          <a href="#" id="githubLogoLink" style="display: flex; align-items: center; justify-content: center;">
+            <img src="icons/github-logo.png" alt="GitHub" width="24" height="24">
+          </a>
+          <p style="margin: 0; text-align: center;"><a href="https://github.com/your-github-repo" id="githubRepoTextLink" target="_blank">Visit our GitHub repository for more information.</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Support Us</h2>
+      <p>If you enjoy using this extension, consider supporting us with a donation.</p>
+      <p>Your contributions help us maintain and improve the extension.</p>
+      <p>We accept donations in various cryptocurrencies.</p>
+      <div class="info-item">
+        <button id="donateButton">Donate Here</button>
+        <p id="gratitudeMessage" style="display: none; color: green;">Thank you for your generous contribution!</p>
+        <div id="cryptoSelection" style="display: none;">
+          <label for="cryptoSelectContainer">Select Cryptocurrency:</label>
+            <div id="cryptoSelectContainer" style="position: relative; width: 300px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+            <div id="cryptoSelectedDisplay" style="display:none; align-items:center; gap:8px; position:absolute; left:0; top:0; width:100%; height:40px; background:#2a2a2a; border-radius:8px; border:1.5px solid #444; padding:6px 10px; z-index:11; cursor:pointer; font-size:1.08em; box-sizing:border-box; transition: background 0.2s, border-color 0.2s, box-shadow 0.2s; color: #e0e0e0;"></div>
+            <input type="text" id="cryptoSearchInput" placeholder="Search cryptocurrency..." style="width: 100%; padding: 10px 12px; margin-bottom: 8px; border-radius: 8px; border: 1.5px solid #444; font-size: 1.08em; background: #2a2a2a; box-shadow: 0 1px 4px rgba(0,0,0,0.04); outline: none; transition: border 0.2s, box-shadow 0.2s; height:40px; box-sizing:border-box; color: #e0e0e0;">
+            <div id="cryptoDropdownList" style="max-height: 220px; overflow-y: auto; border: 1.5px solid #444; border-radius: 8px; background: #2a2a2a; position: absolute; width: 100%; z-index: 10; display: none; box-shadow: 0 2px 12px rgba(0,0,0,0.10); top: 48px;"></div>
+          </div>
+          <button id="proceedToNetworkSelection">Proceed</button>
+          <div id="qrCodeContainer" style="display: none;"></div>
+          <div id="addressDisplay" style="display: none;"></div>
+          <div id="memoDisplay" style="display: none;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Donation Modal -->
+    <div id="donationModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2 id="modalCryptoName"></h2>
+        <div id="modalNetworkSelection">
+          <h4>Choose Network:</h4>
+          <select id="modalNetworkSelect">
+            <option value="">Select a network</option>
+          </select>
+          <button id="proceedButton" style="display: none;">Proceed</button>
+        </div>
+        <div id="qrCodeAndDetails" style="display: none;">
+          <div id="qrcode"></div>
+          <div class="wallet-details">
+            <p>Network: <span id="modalNetwork"></span></p>
+            <p>Wallet Address: <span id="modalWalletAddress"></span> <button id="copyAddressButton">Copy</button></p>
+            <p id="modalMemoContainer" style="display: none;">Memo: <span id="modalMemo"></span> <button id="copyMemoButton">Copy</button></p>
+          </div>
+          <p class="modal-support-text">Support the cryptocurrency nerds</p>
+          <p class="modal-gratitude"><b>Donations sincerely accepted.</b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="qrcode.min.js"></script>
+  <script src="crypto-list.js"></script>
+  <script src="about.js"></script>
+</body>
+</html>
