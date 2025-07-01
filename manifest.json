@@ -81,6 +81,12 @@
       "run_at": "document_idle"
     }
   ],
+  "web_accessible_resources": [
+    {
+      "resources": ["png/*.png", "icons/*.png", "icons/crypto/*.png"],
+      "matches": ["<all_urls>"]
+    }
+  ],
   "commands": {
     "open-extension-popup": {
       "suggested_key": {
