@@ -20,7 +20,18 @@ NoGrey — A browser extension that lets you personalize Stake casino colors and
     - **Stake Promotions**: Button to view promotions (Posted by moderators).
     - **Stake Community Boards**: Button to view community "Board" links (Posted by moderators).
     - **Other Features**: Coming soon.
-   
+
+
+![ibb](https://github.com/user-attachments/assets/d9eec53b-04f4-4a32-956d-3ef9a88816b6)
+![gyazo](https://github.com/user-attachments/assets/341b6f6b-e97c-4664-8432-6fc9479b673e)
+![board](https://github.com/user-attachments/assets/6c8ed625-7c8d-4722-a56a-fa7885cc7e89)
+![yt](https://github.com/user-attachments/assets/ef459504-b2a6-4520-91ed-ddc090fe37e6)
+![streamable](https://github.com/user-attachments/assets/2702b3c3-ebda-4f0c-8582-5d6f6492b918)
+![promo](https://github.com/user-attachments/assets/7834ddf6-4bd2-41f8-b989-440940ef4450)
+![lightshot](https://github.com/user-attachments/assets/e518a697-6af6-494a-9d7d-a570c00b04dc)
+
+
+
 ## Installation
  
 1. Clone or download this repository.
