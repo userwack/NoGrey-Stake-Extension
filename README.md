@@ -2,6 +2,8 @@
 
 NoGrey — A browser extension that lets you personalize Stake casino colors and change raw chat URLS to button previews.
 
+![image](https://github.com/user-attachments/assets/12adab65-5218-458a-97b9-31709272a65f)
+
 ## Features
 - **Custom Theme Colors:**
   - Instantly recolor the entire Stake interface with your preferred accent color (provided in the extension or your custom RGB).
